@@ -30,6 +30,8 @@ else
   Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 endif
 
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'ajmwagar/vim-deus'
 Plug 'lifepillar/vim-solarized8'
@@ -39,6 +41,7 @@ Plug 'sainnhe/edge'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'sainnhe/sonokai'
 Plug 'sainnhe/gruvbox-material'
+Plug 'rakr/vim-one'
 
 if !exists('g:started_by_firenvim')
   " colorful status line and theme
@@ -421,9 +424,9 @@ omap s <Nop>
 "{{ UI: Status line, look
 """""""""""""""""""""""""""vim-airline setting""""""""""""""""""""""""""""""
 " Set airline theme to a random one if it exists
-let s:candidate_airlinetheme = ['ayu_mirage', 'lucius', 'ayu_dark', 'base16_bright',
+let s:candidate_airlinetheme = ['onedark', 'ayu_mirage', 'lucius', 'ayu_dark', 'base16_bright',
       \ 'base16_adwaita', 'jellybeans', 'luna', 'raven', 'term', 'base16_summerfruit']
-let s:theme = s:candidate_airlinetheme[2]
+let s:theme = s:candidate_airlinetheme[0]
 
 if utils#HasAirlinetheme(s:theme)
   let g:airline_theme=s:theme
